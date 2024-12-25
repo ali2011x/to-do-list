@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+
+    color: white;
+    width: 125px;
+    height: 65px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.select-project {
+    background-color: #007bff;
+}
+
+.new-task {
+    background-color: #c51b86;
+}
+
+.new-task:hover {
+    background-color: #5a0303;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content:hover {
+    display: block;
+}
+
+.dropdown-item, .new-proj-button {
+    color: black;
+    width: 125px;
+    height: 65px;
+    padding: 10px 8px 4px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-input {
+    color: black;
+    width: 125px;
+    height: 65px;
+    padding: 10px 8px 0 10px;
+    font-size: 14px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.due-date-box {
+    color: black;
+    width: 125px;
+    height: 65px;
+    padding: 10px 8px 0 10px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.due-date-span {
+    width: 60px;
+}
+
+.task-due-date-input {
+   width: 67px;
+   padding: 8px;
+   border: 1px solid #ccc;
+   border-radius: 4px
+}
+
+.priority-box {
+    color: black;
+    width: 125px;
+    height: 65px;
+    padding: 10px 8px 0 10px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.priority-span {
+    width: 90px;
+}
+
+.priority-input {
+    width: 60px;
+}
+
+.task-submit-button {
+    background-color:rgb(18, 189, 18);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+}
+
+.submit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-submit-button {
+    background-color: rgb(22, 119, 5);
+}
+
+.dropdown-item-text {
+    flex: 3;
+}
+
+.project-delete-button {
+    background: transparent;
+    flex: 1;
+    font-size: 20px;
+}
+
+.project-delete-button:hover {
+   color: rgba(198, 37, 58, 0.7)
+}
+
+
+.dropdown-item:hover, .new-proj-button:hover {
+    background-color: #bfbdbd;
+}
+
+.dropdown:hover .dropdown-content, .new-proj-button {
+    display: block;
+}
+
+
+.new-project-input {
+    background-color: transparent;
+    width: 125px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid black;
+    border-left: 0px;
+    padding: 5px;
+}
+
+.project-submit-button {
+    background-color: rgb(18, 189, 18);
+    border-radius: 25px;
+    border: none;
+    margin: 10px 10px 10px 30px;
+}
+
+.project-submit-button:hover {
+    background-color: rgb(22, 119, 5)
+}
+
+.project-cancel-button {
+    background-color: rgb(189, 18, 18);
+    border-radius: 25px;
+    border: none;
+    margin: 10px 30px 10px 10px;
+}
+
+.project-cancel-button:hover {
+    background-color: rgb(119, 22, 5)
+}
+
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 150px;
+    align-items: center;
+    margin: 50px 0 0 50px;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 150px 50px 50px 50px;
+    max-width: 1200px;
+}
+
+.task {
+    border: 1px solid black;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 1px solid black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.task:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.task-name, .task-due-date, .task-description, .task-priority {
+    margin-left: 10px;
+    flex: 1;
+}
+
+.task-delete {
+    background-color: rgb(189, 18, 18);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+
+}
+.task-delete:hover {
+    background-color: transparent;
+    border: 0.5px solid black;
+}
+
+
+
